@@ -3,14 +3,16 @@ package egovframework.example.boot.web;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @ImportResource({"classpath:/egovframework/springmvc/dispatcher-servlet.xml","classpath*:/egovframework/spring/context-*.xml"})
 @Import(EgovBootInitialization.class)
-@ComponentScan(basePackages="egovframework.example")
+@ComponentScan(basePackages="egovframework.*")
 public class EgovBootApplication {
 
 	public static void main(String[] args) {

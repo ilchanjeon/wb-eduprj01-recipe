@@ -3,6 +3,7 @@ package egovframework.example.boot.web;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -28,6 +29,11 @@ public class EgovBootInitialization implements WebMvcConfigurer {
         LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
         interceptor.setParamName("language");
         return interceptor;
+    }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
     }
 
     @Override

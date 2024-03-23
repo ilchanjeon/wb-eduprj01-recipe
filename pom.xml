@@ -6,7 +6,7 @@
 	<artifactId>boot-example</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
-	<name>boot-example</name>
+	<name>recipe</name>
 	<url>http://www.egovframe.go.kr</url>
 
 	<licenses>
